@@ -22,12 +22,13 @@ const updateUI = (data) => {
   const iconSrc = `icons/${weather.WeatherIcon}.svg`;
   icon.setAttribute("src", iconSrc);
 
-  let timeSrc = null;
-  if (weather.IsDayTime) {
-    timeSrc = "icons/day.svg";
-  } else {
-    timeSrc = "icons/night.svg";
-  }
+  let timeSrc = weather.IsDayTime ? "icons/day.svg" : "icons/night.svg";
+  //   let timeSrc = null;
+  //   if (weather.IsDayTime) {
+  //     timeSrc = "icons/day.svg";
+  //   } else {
+  //     timeSrc = "icons/night.svg";
+  //   }
   time.setAttribute("src", timeSrc);
 
   // remove the d-none class if present
