@@ -2,7 +2,7 @@ const key = `n3VJe5GtOVhh2flGFBi3520fMGB9B1ln`;
 
 // get weather info
 
-const getweather = async (id) => {
+const getWeather = async (id) => {
   const base = "http://dataservice.accuweather.com/currentconditions/v1/";
   const query = `${id}?apikey=${key}`;
 
@@ -23,7 +23,7 @@ const getCity = async (city) => {
 
 getCity("kalyan")
   .then((data) => {
-    return getweather(data.Key);
+    return getWeather(data.Key);
   })
   .then((data) => {
     console.log(data);
